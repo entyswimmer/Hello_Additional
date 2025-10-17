@@ -1,10 +1,10 @@
 # Hello_Additional
 
-## googleアカウントをお持ちの方
+・googleアカウントをお持ちの方
 
 GoogleColabでの実行をお勧めします
 
-## googleアカウントをお持ちでない方
+・googleアカウントをお持ちでない方
 
 以下のサイトの利用をお勧めします
 
