@@ -11,10 +11,4 @@
     https://jupyterlite.github.io/demo/lab/
 
 #### フォルダ構成
-Python_Practice/
-    |
-    |
-    | -  Game/
-    |   |
-    |   |
-    |   | - じゃんけんゲーム.ipynb -> こちらをダウンロード 
+
