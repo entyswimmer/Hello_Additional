@@ -1,6 +1,6 @@
 # 使用サイト
 
-[こちらをクリック(Codepenへ移動)](https://playcode.io)
+[こちらをクリック(playcodeへ移動)](https://playcode.io)
 
 ---
 
