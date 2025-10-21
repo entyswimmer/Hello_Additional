@@ -8,7 +8,7 @@ const BULLET_SIZE = 5;
 const ENEMY_SIZE = 15;
 const PLAYER_SPEED = 5;
 const BULLET_SPEED = 7;
-const ENEMY_SPEED = 1;
+const ENEMY_SPEED = 1.5;
 
 let score = 0;
 let isGameOver = false;
@@ -205,6 +205,14 @@ function checkCollisions() {
     bullets = newBullets; // 衝突で消えなかった弾に更新
 }
 
+// 描画を集約する関数
+function draw() {
+    drawPlayer();
+    drawBullets();
+    drawEnemies();
+    drawText();
+}
+
 // --- メインゲームループ ---
 function gameLoop(timestamp) {
     if (isGameOver) {
@@ -228,14 +236,6 @@ function gameLoop(timestamp) {
     
     // 次のフレームを要求
     requestAnimationFrame(gameLoop);
-}
-
-// 描画を集約する関数
-function draw() {
-    drawPlayer();
-    drawBullets();
-    drawEnemies();
-    drawText();
 }
 
 // ゲーム開始
