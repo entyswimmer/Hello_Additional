@@ -1,0 +1,13 @@
+body {
+    display: flex;
+    justify-content: center; /* 中央寄せ */
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+#gameCanvas {
+    border: 2px solid #333; /* 枠線 */
+    background-color: #66e466; /* ゲーム背景 */
+}
