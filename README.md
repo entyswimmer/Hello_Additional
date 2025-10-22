@@ -18,7 +18,6 @@ colabでの使用方法
 ・googleアカウントをお持ちでない方
 
 以下のサイト（ジュピターライト）の利用をお勧めします
-
     https://jupyterlite.github.io/demo/lab/
 
 ```
