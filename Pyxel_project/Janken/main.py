@@ -62,8 +62,8 @@ class App:
             self.handle_mouse_input()
 
         elif self.scene == SCENE_RESULT:
-            # 2秒後にタイトル画面に戻る (120フレーム)
-            if pyxel.frame_count % 120 == 0:
+            # 5秒後にタイトル画面に戻る (120フレーム)
+            if pyxel.frame_count % 300 == 0:
                 self.scene = SCENE_TITLE
 
     def handle_mouse_input(self):
