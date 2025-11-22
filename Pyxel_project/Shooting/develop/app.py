@@ -20,8 +20,10 @@ class App:
             pyxel.quit()
 
         # サウンド設定の修正 (定数を使用)
-        pyxel.sounds[0].set("c3b2a2f2e2d2c2", "N", "7531000", "NFNFNNN", 10)
+        pyxel.sounds[0].set("c3b2a2f2e2d2c2", "N", "7531000", "NFNFNNN", 10) #爆破音
         pyxel.sounds[1].set("a1f1", "N", "7777", "N", 20)  # 被弾音
+        pyxel.sounds[2].set("c2c3g3", "P", "777", "NFN", 8) #スタート音
+        pyxel.sounds[3].set("c3g2e2c2", "T", "7777", "NFNf", 12) #ゲームオーバー音
 
         # 初期シーン設定
         self.scene = SCENE_TITLE
@@ -60,6 +62,7 @@ class App:
         """タイトル画面の更新ロジック"""
         # スペースキーを押すとゲーム開始
         if pyxel.btnp(pyxel.KEY_SPACE):
+            pyxel.play(0, 2)
             self.scene = SCENE_GAME
             self.score = 0 # 新しいゲーム開始時にスコアをリセット
             self.reset_game()
@@ -84,7 +87,7 @@ class App:
 
     def update_gameover(self):
         """ゲームオーバー画面の更新ロジック"""
-        if pyxel.btnp(pyxel.KEY_SPACE):
+        if pyxel.btnp(pyxel.KEY_RETURN):
             self.scene = SCENE_TITLE
 
     #ゲームロジックの詳細なアップデート
@@ -109,6 +112,7 @@ class App:
                 self.lives -= 1
                 self.create_explosion(self.player_x + self.C["SIZE"] // 2, self.player_y)
                 if self.lives <= 0:
+                    pyxel.play(0, 3)
                     self.game_over = True
 
     def update_bullets(self):
@@ -206,5 +210,5 @@ class App:
         score_text = f"FINAL SCORE: {self.score}"
         pyxel.text(screen_center_x - len(score_text) * 2, 70, score_text, 5)
         
-        restart_text = "Press SPACE for Title"
+        restart_text = "Press ENTER for Title"
         pyxel.text(screen_center_x - len(restart_text) * 2, 90, restart_text, 7)
